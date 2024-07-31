@@ -35,7 +35,7 @@ def fetch_sp500_tickers():
 sp500_tickers = fetch_sp500_tickers()
 
 # Setting up finnhub client with the API key
-finnhub_client = finnhub.Client(api_key="cq5la21r01qhs6itpjk0cq5la21r01qhs6itpjkg")
+finnhub_client = finnhub.Client(api_key="YOUR API KEY FOR FINNHUB")
 
 
 stock_data = []
