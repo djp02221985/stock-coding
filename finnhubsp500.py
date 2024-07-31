@@ -1,6 +1,9 @@
+#THIS PROGRAM WEBS SCRAPPED S&P 500 STOCK TIKERS FROM A WEBSITE AND THEN SFETCHED STOCK DATA FROM fINNHUB FOR ALL 500 TICKERS. 
+#This program factors for 60 API call limits per minute.
+
 import requests
 from bs4 import BeautifulSoup
-import finnhub                              #THIS PROGRAM WEBS SCRAPPED S&P 500 STOCK TIKERS FROM A WEBSITE AND THEN SFETCHED STOCK DATA FROM fINNHUB FOR ALL 500 TICKERS. At this time I was aware of 30 API call limit. 
+import finnhub                            
 import pandas as pd
 import time
 
@@ -32,7 +35,7 @@ def fetch_sp500_tickers():
 sp500_tickers = fetch_sp500_tickers()
 
 # Setting up finnhub client with the API key
-finnhub_client = finnhub.Client(api_key="YOUR API KEY FOR FINNHUB")
+finnhub_client = finnhub.Client(api_key="cq5la21r01qhs6itpjk0cq5la21r01qhs6itpjkg")
 
 
 stock_data = []
@@ -62,8 +65,8 @@ try:
         counter += 1
 
         # Pause to respect rate limit
-        if counter % 30 == 0:
-            print("The program has paused to keep up with 30 API calls per minute requirement.")
+        if counter % 60 == 0:   
+            print("The program has paused to keep up with 60 API calls per minute limitation.)
             time.sleep(60)
 
 except Exception as e:
