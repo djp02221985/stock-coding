@@ -9,6 +9,7 @@ import pandas as pd
 # Initialize the Finnhub client
 finnhub_client = finnhub.Client(api_key="YOUR API KEY")
 
+#This line of code uses Quote API to fetch data.
 quote = finnhub_client.quote('AAPL')
 
 print(quote)
@@ -20,7 +21,6 @@ quote_dataframe = pd.DataFrame([quote])
 quote_dataframe['Ticker'] = 'AAPL'
 
 quote_dataframe = quote_dataframe[['Ticker'] + [col for col in quote_dataframe.columns if col != 'Ticker']]
-#filename = 'finnhub-after-hours.xlsx'
 
 # This line of code exports the DataFrame to an Excel file
 quote_dataframe.to_excel("finnhub-testing.xlsx", index=False)
