@@ -1,10 +1,10 @@
-#This FETCHES STOCK DATA FOR 5 TICKERS, PROCESSES IT AND EXPORTS IT OT AN EXCEL SHEET.
+#THIS PROGRAM FETCHES STOCK DATA FOR 5 TICKERS, PROCESSES IT, AND EXPORTS IT OT AN EXCEL SHEET.
 
 import finnhub
 import pandas as pd
 
 # This line of code sets up the Finnhub client using personal API key
-finnhub_client = finnhub.Client(api_key="cq5la21r01qhs6itpjk0cq5la21r01qhs6itpjkg")
+finnhub_client = finnhub.Client(api_key="YOUR API KEY FOR FINNHUB")
 
 
 tickers = ['AAPL', 'TSLA', 'MSFT', 'AMZN', 'META']
