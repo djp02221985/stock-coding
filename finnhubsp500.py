@@ -66,7 +66,7 @@ try:
 
         # Pause to respect rate limit
         if counter % 60 == 0:   
-            print("The program has paused to keep up with 60 API calls per minute limitation.)
+            print("The program has paused to keep up with 60 API calls per minute limitation.")
             time.sleep(60)
 
 except Exception as e:
