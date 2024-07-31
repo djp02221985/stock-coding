@@ -62,7 +62,8 @@ def fetch_data():
         
     except Exception as e:
         print(f"An error occurred: {e}")
-
+        
+#Execution point of program.
 if __name__ == "__main__":
     fetch_data()
     
