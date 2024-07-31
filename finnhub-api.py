@@ -6,7 +6,7 @@ import finnhub
 import pandas as pd
 
 # Set up the Finnhub client with your API key
-finnhub_client = finnhub.Client(api_key="cq5la21r01qhs6itpjk0cq5la21r01qhs6itpjkg")
+finnhub_client = finnhub.Client(api_key="YOUR API KEY FOR FINNHUB")
 
 # Thie line of code makes a request to get company basic financials
 company_basic_financials = finnhub_client.company_basic_financials('AAPL', "all")
